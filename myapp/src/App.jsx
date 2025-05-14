@@ -1,5 +1,7 @@
 import React , { useState } from 'react'
 import './App.css'
+import Login from './pages/login'
+import Register from './pages/register'
 function App() {
   let [a,setA]=useState(0);
   let [b,setB]=useState(0);
@@ -41,6 +43,7 @@ function App() {
     setA(++a);
     console.log(a);
   }
+  
   return(
     <div id="app">
       <h1>Welcome to the App</h1>
@@ -55,8 +58,13 @@ function App() {
       <div className="str_disp">
       <input type="text" id="input" placeholder="Enter your name" onChange={()=>change(event)}/>
       <button id="btn" onClick={handleClick}>Submit</button>
-      <p id='txt'>.......the entered tex is:<b>{d}</b>.......</p>
       </div>
+      <p id='txt'>.......the entered tex is:<b>{d}</b>.......</p>
+      <div className='login_reg'>
+        <Login />
+        <Register />
+      </div>
+      
       
     </div>
   )
