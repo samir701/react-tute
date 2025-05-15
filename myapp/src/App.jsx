@@ -7,6 +7,7 @@ function App() {
   let [b,setB]=useState(0);
   let [c,setC]=useState('');//c=samir
   let [d,setD]=useState('');
+  //main function
   function change(event){
   
     setC(event.target.value);
